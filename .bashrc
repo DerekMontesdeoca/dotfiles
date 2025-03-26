@@ -114,7 +114,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
+if [[ -f "$HOME/.cargo/env" ]]; then
+    . "$HOME/.cargo/env"
+fi
 
 # If not running interactively, don't do anything
 case $- in
@@ -123,7 +125,7 @@ case $- in
 esac
 
 # Path to the bash it configuration
-export BASH_IT="/home/demont93/.bash_it"
+export BASH_IT="~/.bash_it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
