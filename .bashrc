@@ -27,7 +27,6 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 shopt -s globstar
 
-shopt -s autocd
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -129,7 +128,7 @@ export BASH_IT="/home/demont93/.bash_it"
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
 # location "$BASH_IT"/themes/
-export BASH_IT_THEME='demula'
+export BASH_IT_THEME='demula2'
 
 # Some themes can show whether `sudo` has a current token or not.
 # Set `$THEME_CHECK_SUDO` to `true` to check every prompt:
@@ -199,4 +198,10 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 shopt -s dotglob
+shopt -s nullglob
+
+alias paco=~/francinette/tester.sh
+alias cd='pushd >/dev/null'

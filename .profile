@@ -25,4 +25,9 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+export PATH=$PATH:/opt/clion-2024.2.2/bin
+
+export EDITOR=nvim
+export XDG_CONFIG_HOME="$HOME/.config"
+
 . "$HOME/.cargo/env"
