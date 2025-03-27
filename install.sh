@@ -9,4 +9,4 @@ if ! command -v fzf; then
     ~/.fzf/install
 fi
 rsync -azv "$SCRIPT_DIR/.config" "$SCRIPT_DIR/.local" "$SCRIPT_DIR/.bashrc" \
-    "$SCRIPT_DIR/.profile" "$HOME"
+    "$SCRIPT_DIR/.profile" "$SCRIPT_DIR/.inputrc" "$HOME"
